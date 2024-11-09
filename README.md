@@ -92,13 +92,6 @@ code-compiler-editor/
 3. The backend spins up a Docker container for the selected language, runs the code inside the container, and returns the output to the frontend.
 4. The output is then displayed to the user in real-time.
 
-## Screenshots
-
-### Code Editor UI
-![Code Editor UI](path-to-screenshot)
-
-### Output Section
-![Output Section](path-to-screenshot)
 
 ## Contributing
 
