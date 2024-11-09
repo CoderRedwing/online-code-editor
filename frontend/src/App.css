@@ -1,0 +1,129 @@
+/* Topbar container - Container for Run, Output, and Clear */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+  background-color: #f4f4f4;
+  border-bottom: 1px solid #ccc;
+  height: 50px;
+}
+
+/* Container for the Run button - on the left in the editor section */
+.editor-top-controls {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* Output label - centered in the middle */
+.output-label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #666;
+  flex-grow: 1; /* This allows the output label to take the space between Run and Clear */
+  text-align: center; /* Center the Output text */
+}
+
+/* Controls for the Clear button - on the right */
+.topbar-controls {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+/* Topbar buttons - shared styles for both Run and Clear */
+.topbar-button {
+  padding: 5px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Run button specific styling */
+.run-btn {
+  background-color: #007bff;
+  color: white;
+  margin-right: 10px; /* Ensure space between the Run button and Output label */
+}
+
+.run-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Clear button specific styling */
+.clear-btn {
+  background-color: #e0e0e0;
+  color: black;
+}
+
+.clear-btn:hover {
+  background-color: #ccc;
+}
+
+/* Main container for the editor */
+.code-editor-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Editor and output container */
+.editor-output-container {
+  display: flex;
+  flex: 1;
+}
+
+/* Vertical toolbar for language selection */
+.vertical-toolbar {
+  width: 60px;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  align-items: center;
+  border-right: 1px solid #ccc;
+}
+
+.vertical-toolbar button {
+  background: none;
+  border: none;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.vertical-toolbar img {
+  width: 40px;
+  height: 40px;
+}
+
+/* Editor section */
+.editor-section {
+  flex: 0 0 60%;  /* Editor takes 60% width */
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-right: 1px solid #ccc;
+  overflow-y: auto;  /* Enable vertical scroll */
+  overflow-x: hidden; /* Disable horizontal scroll */
+}
+
+/* Output section */
+.output-section {
+  flex: 0 0 40%;  /* Output section takes 40% width */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.output-section pre {
+  padding: 10px;
+  background-color: #333;
+  color: black;
+  border-radius: 5px;
+  white-space: pre-wrap;
+  max-height: calc(100vh - 100px);  /* Prevent overflow */
+  overflow-y: auto;
+  background-color: transparent;
+}

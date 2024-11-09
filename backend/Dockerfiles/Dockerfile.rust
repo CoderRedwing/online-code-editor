@@ -1,0 +1,8 @@
+# Use a lightweight Rust image
+FROM rust:latest
+
+# Set working directory
+WORKDIR /usr/src/app
+
+# Command to compile and run Rust code
+CMD ["bash", "-c", "rustc main.rs && ./main"]
